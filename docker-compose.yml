@@ -10,10 +10,10 @@ services:
             - ./www:/var/www
             - ./logs:/var/log/nginx
         links:
-            - php
-    php:
+            - php_nodejs
+    php_nodejs:
         restart: unless-stopped
-        build: ./images/php
+        build: ./images/php_nodejs
         links:
             - mysql
         volumes:
