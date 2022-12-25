@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Comments;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,6 +22,5 @@ Route::get('contacts', function () {
     return view('contacts');
 });
 
-Route::get('comments', function () {
-    return view('comments');
-});
+Route::get('comments', [Comments::class, 'show']);
+Route::post('comments', [Comments::class, 'store']);

@@ -10,7 +10,9 @@
     text-shadow: none; /* Prevent inheritance from `body` */
 }
 
-
+#cards::-webkit-scrollbar {
+    display: none;
+}
 /*
  * Base structure
  */
